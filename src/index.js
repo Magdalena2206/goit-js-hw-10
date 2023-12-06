@@ -4,13 +4,13 @@ import  Notiflix  from 'notiflix';
 import SlimSelect from 'slim-select';
 import 'slim-select/dist/slimselect.css';
 
-const ref = {
-    selector: document.querySelector('.breed-select'),
-    catInfo: document.querySelector('.cat-info'),
-    loader: document.querySelector('.loader'),
-    error: document.querySelector('.error'),
-};
-const { selector, catInfo, loader, error } = ref;
+
+const selector = document.querySelector('.breed-select');
+const catInfo = document.querySelector('.cat-info');
+const loader = document.querySelector('.loader');
+const error = document.querySelector('.error');
+
+const ref = { selector, catInfo, loader, error };
 
 loader.classList.replace('loader', 'is-hidden');
 error.classList.add('is-hidden');
@@ -35,7 +35,7 @@ function onErrorFetch(error) {
     selector.classList.remove('is-hidden');
     loader.classList.replace('loader', 'is-hidden');
     Notiflix.Notify.failure('Upss! Coś poszło nie tak! Spróbuj odświezyć stronę!', {
-        position: 'center-center',
+        position: 'center',
         timeout: 5000,
         width: '400px',
         fontSize: '24px'
