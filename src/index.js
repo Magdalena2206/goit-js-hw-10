@@ -13,7 +13,7 @@ const error = document.querySelector('.error');
 const ref = { selector, catInfo, loader, error };
 
 // loader.classList.replace('loader', 'is-hidden');
-// error.classList.add('is-hidden');
+error.classList.add('is-hidden');
 catInfo.classList.add('is-hidden');
 
 
